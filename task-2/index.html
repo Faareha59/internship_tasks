@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Intern registration form and training summary table">
+    <meta name="author" content="Faareha Raza">
+    <title>Intern Registration Form </title>
+  </head>
+
+  <body>
+
+    <div id="header" class="section">
+      <h1>Intern Registration</h1>
+      <p>
+        Welcome to the <strong>Web Development Internship</strong>! Please fill in
+        the form below to register. Fields marked with <strong>*</strong> are
+        <em>required</em>.
+      </p>
+      <p>
+        <mark>Tip:</mark> keep your resume ready as a PDF or Word file.<br>
+        <small>Your details are only used for this internship.</small>
+      </p>
+      <ul>
+        <li><a href="#registration">Go to the registration form</a></li>
+        <li><a href="#summary">Go to the course summary table</a></li>
+      </ul>
+    </div>
+
+    <hr>
+
+   
+    <div id="registration" class="section">
+      <h2>Registration Form</h2>
+
+      <form id="registration-form" action="#" method="post" enctype="multipart/form-data">
+
+        
+        <fieldset>
+          <legend>1. Personal Information</legend>
+
+          <p>
+            <label for="first-name">First Name *</label><br>
+            <input type="text" id="first-name" name="first_name" placeholder="e.g. Faareha" autocomplete="given-name" required>
+          </p>
+
+          <p>
+            <label for="last-name">Last Name *</label><br>
+            <input type="text" id="last-name" name="last_name" placeholder="e.g. Raza" autocomplete="family-name" required>
+          </p>
+
+          <p>
+            <label for="email">Email *</label><br>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          </p>
+
+          <p>
+            <label for="phone">Phone *</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="+92 300 1234567" autocomplete="tel" pattern="\+?[0-9 \-]{10,15}" title="Enter 10 to 15 digits. You may use + and spaces." required>
+          </p>
+
+          <p>
+            <label for="birth-date">Date of Birth *</label><br>
+            <input type="date" id="birth-date" name="birth_date" autocomplete="bday" max="2010-12-31" required>
+          </p>
+
+          <p>
+            <label for="password">Password *</label><br>
+            <input type="password" id="password" name="password" placeholder="At least 8 characters" autocomplete="new-password" minlength="8" required>
+          </p>
+        </fieldset>
+
+        <br>
+
+        
+        <fieldset>
+          <legend>2. Training Preferences</legend>
+
+          <p>
+            <span>Interview Availability Window *</span><br>
+            <label for="interview-from">Free from</label>
+            <input type="time" id="interview-from" name="interview_from" min="09:00" max="17:00" step="900" value="10:00" required>
+            <label for="interview-to">until</label>
+            <input type="time" id="interview-to" name="interview_to" min="09:00" max="17:00" step="900" value="12:00" required><br>
+            <small>Choose any time between 9:00 AM and 5:00 PM. We will pick a slot inside your window.</small>
+          </p>
+
+          <p>
+            <label for="training-month">Preferred Training Month *</label><br>
+            <input type="month" id="training-month" name="training_month" min="2026-11" max="2027-06" required>
+          </p>
+
+          <p>
+            <label for="training-week">Preferred Training Week</label><br>
+            <input type="week" id="training-week" name="training_week" min="2026-W45" max="2027-W26">
+          </p>
+
+          <p>
+            <label for="track-search">Search for a Training Track</label><br>
+            <input type="search" id="track-search" name="track_search" placeholder="e.g. React, Node.js, AI" size="30">
+          </p>
+
+          <p>
+            <label for="milestone">First Milestone You Want to Reach *</label><br>
+            <select id="milestone" name="milestone" required>
+              <option value="">-- Choose a milestone --</option>
+              <optgroup label="Month 1: Basics">
+                <option value="html-forms">Finish HTML and forms</option>
+                <option value="css-layout">Finish CSS layouts</option>
+              </optgroup>
+              <optgroup label="Month 2: Programming">
+                <option value="javascript" selected>Learn JavaScript</option>
+                <option value="react">Build a React app</option>
+              </optgroup>
+              <optgroup label="Month 3: Projects">
+                <option value="fullstack">Build a full stack project</option>
+                <option value="ai-feature">Add an AI feature</option>
+              </optgroup>
+            </select>
+          </p>
+
+          <p>
+            <span>Areas You Are Interested In (choose any)</span><br>
+            <input type="checkbox" id="area-frontend" name="areas" value="frontend" checked>
+            <label for="area-frontend">Front End</label><br>
+
+            <input type="checkbox" id="area-backend" name="areas" value="backend">
+            <label for="area-backend">Back End</label><br>
+
+            <input type="checkbox" id="area-ai" name="areas" value="ai">
+            <label for="area-ai">Artificial Intelligence</label>
+          </p>
+        </fieldset>
+
+        <br>
+
+        
+        <fieldset>
+          <legend>3. Profile and Documents</legend>
+
+          <p>
+            <label for="portfolio">Portfolio URL</label><br>
+            <input type="url" id="portfolio" name="portfolio" placeholder="https://github.com/yourname" autocomplete="url" size="40">
+          </p>
+
+          <p>
+            <label for="resume">Resume (PDF, DOC ) *</label><br>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+          </p>
+
+          <p>
+            <label for="skill-level">Your Skill Level (0 = beginner, 10 = expert)</label><br>
+            <input type="range" id="skill-level" name="skill_level" min="0" max="10" step="1" value="5">
+          </p>
+
+          <p>
+            <label for="badge-color">Pick a Color for Your Intern ID Badge</label><br>
+            <input type="color" id="badge-color" name="badge_color" value="#2e7d32" list="badge-colors">
+            <datalist id="badge-colors">
+              <option value="#d32f2f" label="Red">
+              <option value="#1976d2" label="Blue">
+              <option value="#2e7d32" label="Green">
+              <option value="#f9a825" label="Yellow">
+              <option value="#6a1b9a" label="Purple">
+            </datalist>
+            <br>
+            <small>Click the box to open the color picker. Some browsers also show preset colors.</small>
+          </p>
+
+          <p>
+            <label for="address">Address or Note *</label><br>
+            <textarea id="address" name="address" rows="4" cols="50" placeholder="Write your address or any note for us" autocomplete="street-address" required></textarea>
+          </p>
+        </fieldset>
+
+        <br>
+
+       
+        <fieldset>
+          <legend>4. Agreement</legend>
+
+          <p>
+            <input type="checkbox" id="terms" name="terms" value="accepted" required>
+            <label for="terms">I confirm that the information above is correct and I accept the internship terms. *</label>
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Register</button>
+          <button type="reset">Reset</button>
+        </p>
+
+      </form>
+    </div>
+
+    <hr>
+
+
+    <div id="summary" class="section">
+      <h2>Course and Training Summary</h2>
+
+      <table border="1" cellpadding="6">
+        <caption>Internship courses, duration and level</caption>
+
+        <colgroup>
+          <col span="1">
+          <col span="1">
+          <col span="2">
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th scope="col">Course</th>
+            <th scope="col">Topic</th>
+            <th scope="col">Duration (weeks)</th>
+            <th scope="col">Level</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Course 1</td>
+            <td>HTML Basics and Forms</td>
+            <td>1</td>
+            <td>Beginner</td>
+          </tr>
+          <tr>
+            <td>Course 2</td>
+            <td>Tables and Better Forms</td>
+            <td>1</td>
+            <td>Beginner</td>
+          </tr>
+          <tr>
+            <td>Course 3</td>
+            <td>React and TypeScript</td>
+            <td>4</td>
+            <td>Intermediate</td>
+          </tr>
+          <tr>
+            <td>Course 4</td>
+            <td>Node.js and MongoDB</td>
+            <td>4</td>
+            <td>Intermediate</td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td colspan="2"><strong>Total duration</strong></td>
+            <td colspan="2">10 weeks</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <p>
+        <span>Need help?</span>
+        <a href="https://www.riphah.edu.pk/" target="_blank" rel="noopener noreferrer">Visit Riphah International University</a>
+      </p>
+    </div>
+
+    <hr>
+
+    <p><small>&copy; 2026 Faareha Raza</small></p>
+
+  </body>
+</html>
